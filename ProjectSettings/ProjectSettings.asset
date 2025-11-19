@@ -3,7 +3,7 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 24
   productGUID: 70094dc9393c5624b97d8884e260d0eb
   AndroidProfiler: 0
   defaultScreenOrientation: 4
@@ -572,7 +572,7 @@ PlayerSettings:
     WebPlayer: 0
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
-  scriptingRuntimeVersion: 0
+  scriptingRuntimeVersion: 1
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 3
   m_MobileRenderingPath: 1
@@ -665,7 +665,7 @@ PlayerSettings:
     UNet: 0
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 6
   cloudProjectId: 
   projectName: 
   organizationId: 

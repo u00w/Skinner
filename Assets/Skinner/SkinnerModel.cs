@@ -40,7 +40,14 @@ namespace Skinner
             var inVertices = source.vertices;
             var inNormals = source.normals;
             var inTangents = source.tangents;
+            
+            #if UNITY_2019_1_OR_NEWER
+            #pragma warning disable CS0618 // Type or member is obsolete
+            #endif
             var inBoneWeights = source.boneWeights;
+            #if UNITY_2019_1_OR_NEWER
+            #pragma warning restore CS0618 // Type or member is obsolete
+            #endif
 
             // Enumerate unique vertices.
             var outVertices = new List<Vector3>();
@@ -84,7 +91,14 @@ namespace Skinner
             _mesh.SetTangents(outTangents);
             _mesh.SetUVs(0, outUVs);
             _mesh.bindposes = source.bindposes;
+            
+            #if UNITY_2019_1_OR_NEWER
+            #pragma warning disable CS0618 // Type or member is obsolete
+            #endif
             _mesh.boneWeights = outBoneWeights.ToArray();
+            #if UNITY_2019_1_OR_NEWER
+            #pragma warning restore CS0618 // Type or member is obsolete
+            #endif
 
             // Add point primitives.
             _mesh.subMeshCount = 1;

@@ -1,6 +1,8 @@
 Skinner
 =======
 
+> **Unity Version**: This project has been upgraded to Unity 6000.0.58f2 (Unity 6). See [CHANGELOG.md](CHANGELOG.md) for upgrade details and manual steps required after opening the project.
+
 ![gif](http://i.imgur.com/k838bjc.gif)
 ![gif](http://i.imgur.com/Elfd8QE.gif)
 
@@ -148,7 +150,11 @@ lines are, the fewer lines are drawn.
 Compatibility
 -------------
 
-At the moment *Skinner* is only tested on Windows, macOS and iOS (metal).
+**Unity Version**: Unity 6000.0.58f2 (Unity 6) or later
+
+This project has been upgraded from Unity 2017.1.0p3 to Unity 6000.0.58f2. The upgrade requires manual steps in the Unity Editor after cloning. See [CHANGELOG.md](CHANGELOG.md) for complete upgrade notes.
+
+**Platform Support**: At the moment *Skinner* is only tested on Windows, macOS and iOS (metal).
 Possibly it runs on PS4 and Xboxone, but not sure about GLES3 and WebGL.
 
 License
