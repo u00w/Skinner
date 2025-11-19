@@ -36,7 +36,18 @@ This is a major version upgrade spanning multiple Unity versions. The upgrade in
   - Updated `apiCompatibilityLevel` from 2 (.NET 2.0) to 6 (.NET Standard 2.1)
 - **Impact**: Project now uses modern .NET runtime with access to .NET Standard 2.1 APIs
 
-### 4. Code API Updates
+### 4. Assembly Definition Files (New)
+- **Files**: 
+  - `Assets/Skinner/Skinner.asmdef` (new)
+  - `Assets/Skinner/Editor/Skinner.Editor.asmdef` (new)
+- **Change**: Created assembly definition files for better compilation control
+- **Benefits**:
+  - Faster incremental compilation
+  - Better organization of dependencies
+  - Clearer separation between runtime and editor code
+  - Required for Unity 6000 best practices
+
+### 5. Code API Updates
 - **Files**: 
   - `Assets/Skinner/SkinnerModel.cs`
   - `Assets/Skinner/Editor/SkinnerModelEditor.cs`
