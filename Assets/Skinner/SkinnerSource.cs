@@ -186,9 +186,18 @@ namespace Skinner
             _swapFlag = !_swapFlag;
 
             // Render to vertex attribute buffers at once with using MRT. Note
-            // that we can't use MRT when VR is enabled (due to issue #942235).
+            // that we can't use MRT when XR is enabled (due to issue #942235).
             // In that case, we use separate shaders to workaround the issue.
-            if (!UnityEngine.VR.VRSettings.enabled)
+            // TODO: Verify XR compatibility with Unity 6000 XR systems
+            bool xrEnabled = false;
+            #if ENABLE_VR || ENABLE_XR
+            #if UNITY_2019_3_OR_NEWER
+            xrEnabled = UnityEngine.XR.XRSettings.enabled;
+            #else
+            xrEnabled = UnityEngine.VR.VRSettings.enabled;
+            #endif
+            #endif
+            if (!xrEnabled)
             {
                 if (_swapFlag)
                     _camera.SetTargetBuffers(_mrt1, _positionBuffer1.depthBuffer);
