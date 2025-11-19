@@ -30,7 +30,13 @@ namespace Skinner
 
         static bool CheckSkinned(Mesh mesh)
         {
+            #if UNITY_2019_1_OR_NEWER
+            #pragma warning disable CS0618 // Type or member is obsolete
+            #endif
             if (mesh.boneWeights.Length > 0) return true;
+            #if UNITY_2019_1_OR_NEWER
+            #pragma warning restore CS0618 // Type or member is obsolete
+            #endif
             Debug.LogError(
                 "The given mesh (" + mesh.name + ") is not skinned. " +
                 "Skinner only can handle skinned meshes."
