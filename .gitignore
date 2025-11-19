@@ -79,3 +79,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Unity Package Manager
+# Keep manifest.json but ignore packages-lock.json (auto-generated)
+/[Pp]ackages/packages-lock.json

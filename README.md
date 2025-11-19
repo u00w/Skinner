@@ -1,6 +1,8 @@
 Skinner
 =======
 
+> **Unity Version**: This project has been upgraded to Unity 6000.0.58f1. See [CHANGELOG.md](CHANGELOG.md) for upgrade details.
+
 ![gif](http://i.imgur.com/k838bjc.gif)
 ![gif](http://i.imgur.com/Elfd8QE.gif)
 
