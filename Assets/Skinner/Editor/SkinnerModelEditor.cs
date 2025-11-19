@@ -30,7 +30,10 @@ namespace Skinner
 
         static bool CheckSkinned(Mesh mesh)
         {
+            // TODO: Unity 6000 upgrade - Replace deprecated boneWeights with GetAllBoneWeights()
+            #pragma warning disable CS0618 // Type or member is obsolete
             if (mesh.boneWeights.Length > 0) return true;
+            #pragma warning restore CS0618
             Debug.LogError(
                 "The given mesh (" + mesh.name + ") is not skinned. " +
                 "Skinner only can handle skinned meshes."
