@@ -36,6 +36,10 @@ namespace Skinner
         /// Asset initialization
         public void Initialize(Mesh source)
         {
+            // TODO: Unity 6000 - Consider using GetAllBoneWeights() and SetBoneWeights() 
+            // instead of the deprecated boneWeights property for better performance and 
+            // support for more than 4 bone weights per vertex.
+            
             // Input vertices
             var inVertices = source.vertices;
             var inNormals = source.normals;
