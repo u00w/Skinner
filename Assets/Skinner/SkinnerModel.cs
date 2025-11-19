@@ -36,11 +36,19 @@ namespace Skinner
         /// Asset initialization
         public void Initialize(Mesh source)
         {
+            // TODO: Unity 6000 upgrade - Replace deprecated boneWeights API
+            // Use source.GetAllBoneWeights() and source.GetBonesPerVertex() instead
+            // of source.boneWeights, and _mesh.SetBoneWeights() instead of 
+            // _mesh.boneWeights = array. This requires refactoring the BoneWeight 
+            // handling logic throughout this method.
+            
             // Input vertices
             var inVertices = source.vertices;
             var inNormals = source.normals;
             var inTangents = source.tangents;
+            #pragma warning disable CS0618 // Type or member is obsolete
             var inBoneWeights = source.boneWeights;
+            #pragma warning restore CS0618
 
             // Enumerate unique vertices.
             var outVertices = new List<Vector3>();
@@ -84,7 +92,11 @@ namespace Skinner
             _mesh.SetTangents(outTangents);
             _mesh.SetUVs(0, outUVs);
             _mesh.bindposes = source.bindposes;
+            // TODO: Unity 6000 upgrade - Replace deprecated boneWeights setter
+            // Use _mesh.SetBoneWeights() with NativeArray instead
+            #pragma warning disable CS0618 // Type or member is obsolete
             _mesh.boneWeights = outBoneWeights.ToArray();
+            #pragma warning restore CS0618
 
             // Add point primitives.
             _mesh.subMeshCount = 1;
