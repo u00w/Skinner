@@ -1,6 +1,7 @@
 *.swp
 Extra/backup
 Skinner.unitypackage
+.git-branch-marker
 
 /[Ll]ibrary/
 /[Tt]emp/
