@@ -148,8 +148,12 @@ lines are, the fewer lines are drawn.
 Compatibility
 -------------
 
+**Unity Version:** Unity 6.0.0f1 or later
+
 At the moment *Skinner* is only tested on Windows, macOS and iOS (metal).
 Possibly it runs on PS4 and Xboxone, but not sure about GLES3 and WebGL.
+
+**Note:** This project has been upgraded from Unity 2017.1 to Unity 6. See [CHANGELOG.md](CHANGELOG.md) for details on changes and upgrade instructions.
 
 License
 -------

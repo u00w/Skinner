@@ -40,7 +40,11 @@ namespace Skinner
             var inVertices = source.vertices;
             var inNormals = source.normals;
             var inTangents = source.tangents;
+            
+            // Get bone weights - use the older API for compatibility, with pragma to suppress obsolete warning
+            #pragma warning disable 0618
             var inBoneWeights = source.boneWeights;
+            #pragma warning restore 0618
 
             // Enumerate unique vertices.
             var outVertices = new List<Vector3>();
@@ -84,7 +88,11 @@ namespace Skinner
             _mesh.SetTangents(outTangents);
             _mesh.SetUVs(0, outUVs);
             _mesh.bindposes = source.bindposes;
+            
+            // Set bone weights - use the older API for compatibility, with pragma to suppress obsolete warning
+            #pragma warning disable 0618
             _mesh.boneWeights = outBoneWeights.ToArray();
+            #pragma warning restore 0618
 
             // Add point primitives.
             _mesh.subMeshCount = 1;

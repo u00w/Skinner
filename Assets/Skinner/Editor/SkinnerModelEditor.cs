@@ -30,7 +30,9 @@ namespace Skinner
 
         static bool CheckSkinned(Mesh mesh)
         {
+            #pragma warning disable 0618
             if (mesh.boneWeights.Length > 0) return true;
+            #pragma warning restore 0618
             Debug.LogError(
                 "The given mesh (" + mesh.name + ") is not skinned. " +
                 "Skinner only can handle skinned meshes."
